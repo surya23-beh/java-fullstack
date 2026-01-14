@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Form</title>
+<style>
+    /* Reset and base styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    /* Form container */
+    .login-container {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        width: 100%;
+        max-width: 450px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .login-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Form header */
+    .form-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .form-header h1 {
+        color: #2c3e50;
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+    
+    .form-header p {
+        color: #7f8c8d;
+        font-size: 16px;
+    }
+    
+    /* Form elements */
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    label {
+        color: #2c3e50;
+        font-weight: 600;
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    
+    input[type="text"] {
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        outline: none;
+    }
+    
+    input[type="text"]:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    }
+    
+    input[type="text"]::placeholder {
+        color: #aaa;
+    }
+    
+    /* Submit button */
+    input[type="submit"] {
+        background: linear-gradient(to right, #3498db, #2980b9);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 16px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+        letter-spacing: 0.5px;
+    }
+    
+    input[type="submit"]:hover {
+        background: linear-gradient(to right, #2980b9, #2573a7);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    }
+    
+    input[type="submit"]:active {
+        transform: translateY(0);
+    }
+    
+    /* Decorative elements */
+    .form-footer {
+        text-align: center;
+        margin-top: 25px;
+        color: #7f8c8d;
+        font-size: 14px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 480px) {
+        .login-container {
+            padding: 30px 25px;
+        }
+        
+        .form-header h1 {
+            font-size: 24px;
+        }
+        
+        input[type="text"], input[type="submit"] {
+            padding: 14px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="login-container">
+       
+        <form action="JspServlet" method="post">
+            <div class="form-group">
+                <label for="name">Enter name:</label>
+                <input type="text" name="uname" id="name" placeholder="Type your name here">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <div class="form-footer">
+            <p>Simple login form with CSS styling</p>
+        </div>
+    </div>
+    
+ 
+</body>
+</html>
